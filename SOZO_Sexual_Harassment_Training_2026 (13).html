@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sexual Harassment in the Workplace | SOZO Brain Center 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+:root{--teal:#1a8fa8;--orange:#EE7202;--dark:#0d1117;--card:#161b26;--border:rgba(255,255,255,0.08);--muted:rgba(255,255,255,0.65);--w:880px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:#fff;padding:16px 16px 48px;}
+#wrap{width:100%;max-width:var(--w);margin:0 auto;}
+#topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0 10px;}
+.wordmark{font-family:'Sora',sans-serif;font-size:17px;font-weight:800;background:linear-gradient(90deg,var(--teal),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.wordmark small{display:block;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);-webkit-text-fill-color:rgba(255,255,255,0.3);}
+.toptag{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.3);}
+#prog{height:3px;background:rgba(255,255,255,0.07);border-radius:99px;margin-bottom:14px;}
+#prog-bar{height:100%;background:linear-gradient(90deg,var(--teal),var(--orange));border-radius:99px;transition:width 0.4s ease;width:11%;}
+.page{display:none;}
+.page.show{display:block;animation:up 0.3s ease both;}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+#nav{display:flex;align-items:center;justify-content:space-between;margin-top:16px;}
+.nbtn{padding:11px 24px;border-radius:99px;border:none;cursor:pointer;font-family:'Sora',sans-serif;font-size:13px;font-weight:700;transition:all 0.2s;}
+#btn-back{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.5);}
+#btn-back:hover{background:rgba(255,255,255,0.12);color:#fff;}
+#btn-fwd{background:linear-gradient(135deg,var(--teal),var(--orange));color:#fff;}
+#btn-fwd:hover{opacity:0.88;}
+.ctr{font-size:12px;color:rgba(255,255,255,0.3);font-family:'Sora',sans-serif;font-weight:700;}
+.s-cover{background:linear-gradient(135deg,#0b5f76,#1a8fa8 40%,#b85400 75%,#EE7202);border-radius:20px;padding:60px 48px;text-align:center;position:relative;overflow:hidden;}
+.s-cover::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 65% 25%,rgba(255,255,255,0.07),transparent 55%);}
+.c-logo{font-family:'Sora',sans-serif;font-size:30px;font-weight:800;color:#fff;position:relative;z-index:1;}
+.c-sub{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:28px;position:relative;z-index:1;}
+.c-badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:99px;padding:5px 16px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:18px;position:relative;z-index:1;}
+.s-cover h1{font-family:'Sora',sans-serif;font-size:34px;font-weight:800;line-height:1.15;color:#fff;margin-bottom:14px;position:relative;z-index:1;}
+.s-cover p{font-size:14px;color:rgba(255,255,255,0.75);position:relative;z-index:1;}
+.s-sec{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+.sec-hero{background:linear-gradient(135deg,#0b5f76,#1a8fa8 45%,#b85400 80%,#EE7202);padding:26px 32px 0;position:relative;overflow:hidden;}
+.sec-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(255,255,255,0.06),transparent 60%);}
+.sec-top{display:flex;align-items:center;gap:12px;margin-bottom:18px;position:relative;z-index:1;}
+.sec-ic{font-size:28px;}
+.sec-hero h2{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:#fff;}
+.sec-hero p{font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px;}
+.tbr{display:flex;gap:3px;position:relative;z-index:1;overflow-x:auto;}
+.tbr::-webkit-scrollbar{display:none;}
+.tb{flex-shrink:0;padding:9px 15px;background:rgba(255,255,255,0.08);border:none;border-radius:9px 9px 0 0;font-family:'Sora',sans-serif;font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+.tb:hover{background:rgba(255,255,255,0.14);color:#fff;}
+.tb.on{background:var(--card);color:#fff;}
+.panels{padding:24px 32px 28px;}
+.panel{display:none;}
+.panel.on{display:block;animation:up 0.2s ease both;}
+.grid{display:grid;gap:10px;}
+.g2{grid-template-columns:1fr 1fr;}
+.g1{grid-template-columns:1fr;}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:12px;padding:14px 16px;transition:border-color 0.2s;}
+.card:hover{border-color:rgba(26,143,168,0.35);}
+.ch{display:flex;align-items:center;gap:9px;margin-bottom:6px;}
+.ci{font-size:18px;}
+.ct{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.card p{font-size:13px;color:var(--muted);line-height:1.6;}
+.steps{display:flex;flex-direction:column;gap:10px;}
+.step{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:12px 14px;}
+.sn{width:27px;height:27px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--teal),var(--orange));display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:11px;font-weight:800;color:#fff;}
+.st{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;}
+.sd{font-size:13px;color:var(--muted);line-height:1.55;}
+.scens{display:flex;flex-direction:column;gap:9px;}
+.scen{border-left:3px solid var(--teal);background:rgba(255,255,255,0.03);border-radius:0 10px 10px 0;padding:11px 14px;}
+.sl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:4px;}
+.scen p{font-size:13px;color:var(--muted);line-height:1.6;}
+.hl{background:linear-gradient(135deg,rgba(26,143,168,0.12),rgba(238,114,2,0.07));border:1px solid rgba(26,143,168,0.25);border-radius:12px;padding:13px 16px;margin-top:12px;display:flex;gap:10px;align-items:flex-start;}
+.hli{font-size:17px;flex-shrink:0;}
+.hl p{font-size:13px;color:rgba(255,255,255,0.8);line-height:1.6;}
+.law{background:rgba(26,143,168,0.1);border:1px solid rgba(26,143,168,0.25);border-radius:12px;padding:13px 16px;margin-bottom:12px;display:flex;gap:10px;}
+.lwi{font-size:18px;flex-shrink:0;}
+.law p{font-size:13px;color:rgba(255,255,255,0.8);line-height:1.6;}
+.s-quiz{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:34px;}
+.qz-hd{margin-bottom:26px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+.qz-hd-top{display:flex;align-items:center;gap:11px;margin-bottom:4px;}
+.qz-hd-ic{font-size:26px;}
+.qz-hd h2{font-family:'Sora',sans-serif;font-size:21px;font-weight:800;color:#fff;}
+.qz-hd p{font-size:13px;color:rgba(255,255,255,0.4);margin-left:37px;}
+.qs{display:flex;flex-direction:column;gap:26px;}
+.qlbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:9px;}
+.qtxt{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:#fff;line-height:1.45;margin-bottom:13px;}
+.qtxt .qe{font-size:21px;display:block;margin-bottom:7px;}
+.opts{display:flex;flex-direction:column;gap:7px;}
+.opt{background:rgba(255,255,255,0.04);border:2px solid rgba(255,255,255,0.1);border-radius:11px;padding:12px 15px;cursor:pointer;font-size:13px;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:11px;transition:all 0.2s;text-align:left;font-family:'Inter',sans-serif;width:100%;}
+.opt:hover:not(.off){border-color:var(--teal);background:rgba(26,143,168,0.1);color:#fff;}
+.ol{width:26px;height:26px;border-radius:50%;flex-shrink:0;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:11px;font-weight:800;transition:all 0.2s;}
+.opt.ok{border-color:#22c55e!important;background:rgba(34,197,94,0.1)!important;color:#fff!important;}
+.opt.ok .ol{background:#22c55e;color:#fff;}
+.opt.no{border-color:#ef4444!important;background:rgba(239,68,68,0.08)!important;color:rgba(255,255,255,0.35)!important;}
+.opt.no .ol{background:#ef4444;color:#fff;}
+.opt.off{cursor:default;}
+.fb{margin-top:9px;padding:11px 15px;border-radius:11px;font-size:13px;line-height:1.6;display:none;}
+.fb.show{display:block;}
+.fb.ok{background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);color:#86efac;}
+.fb.no{background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.18);color:#fca5a5;}
+.qdiv{border:none;border-top:1px solid var(--border);margin:4px 0;}
+.sub-row{margin-top:26px;padding-top:20px;border-top:1px solid var(--border);}
+.sub-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--teal),var(--orange));border:none;border-radius:12px;font-family:'Sora',sans-serif;font-size:15px;font-weight:800;color:#fff;cursor:pointer;transition:opacity 0.2s,transform 0.1s;}
+.sub-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.sub-btn:disabled{opacity:0.3;cursor:not-allowed;transform:none;}
+.sub-note{font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:9px;}
+.s-score{background:linear-gradient(135deg,#0b5f76,#1a8fa8 45%,#b85400 80%,#EE7202);border-radius:20px;padding:52px 48px;text-align:center;}
+.ring{width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.15);border:3px solid rgba(255,255,255,0.35);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 22px;}
+.rn{font-family:'Sora',sans-serif;font-size:42px;font-weight:800;color:#fff;line-height:1;}
+.rl{font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px;}
+.rmsg{font-family:'Sora',sans-serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;}
+.rsub{font-size:14px;color:rgba(255,255,255,0.8);max-width:360px;margin:0 auto 26px;line-height:1.6;}
+.rnxt{padding:12px 30px;background:rgba(255,255,255,0.2);border:2px solid rgba(255,255,255,0.4);border-radius:99px;font-family:'Sora',sans-serif;font-size:14px;font-weight:800;color:#fff;cursor:pointer;transition:all 0.2s;}
+.rnxt:hover{background:rgba(255,255,255,0.3);}
+.s-ack{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:34px;}
+.ack-hd{display:flex;align-items:flex-start;gap:12px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+.ack-hd-ic{font-size:28px;}
+.ack-hd h2{font-family:'Sora',sans-serif;font-size:21px;font-weight:800;color:#fff;}
+.ack-hd p{font-size:13px;color:rgba(255,255,255,0.4);margin-top:3px;}
+.name-lbl{font-family:'Sora',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,0.45);letter-spacing:1px;text-transform:uppercase;margin-bottom:7px;display:block;}
+.name-inp{width:100%;padding:13px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:12px;font-family:'Inter',sans-serif;font-size:14px;color:#fff;margin-bottom:18px;outline:none;transition:border-color 0.2s;}
+.name-inp:focus{border-color:var(--teal);}
+.name-inp::placeholder{color:rgba(255,255,255,0.25);}
+.ack-list{display:flex;flex-direction:column;gap:8px;margin-bottom:18px;}
+.ai{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all 0.2s;}
+.ai.on{border-color:rgba(34,197,94,0.35);background:rgba(34,197,94,0.06);}
+.acb{width:20px;height:20px;border-radius:5px;flex-shrink:0;border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:12px;transition:all 0.2s;}
+.ai.on .acb{background:#22c55e;border-color:#22c55e;color:#fff;}
+.at{font-size:13px;color:var(--muted);line-height:1.5;}
+.ai.on .at{color:#fff;}
+.ack-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--teal),var(--orange));border:none;border-radius:12px;font-family:'Sora',sans-serif;font-size:15px;font-weight:800;color:#fff;cursor:pointer;transition:opacity 0.2s,transform 0.1s;}
+.ack-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.ack-btn:disabled{opacity:0.3;cursor:not-allowed;transform:none;}
+.ack-note{font-size:12px;color:rgba(255,255,255,0.3);text-align:center;margin-top:9px;}
+.s-done{background:linear-gradient(135deg,#0b5f76,#1a8fa8 45%,#b85400 80%,#EE7202);border-radius:20px;padding:60px 48px;text-align:center;}
+.done-ic{font-size:60px;margin-bottom:18px;}
+.s-done h2{font-family:'Sora',sans-serif;font-size:28px;font-weight:800;color:#fff;margin-bottom:12px;}
+.s-done p{font-size:15px;color:rgba(255,255,255,0.8);line-height:1.7;max-width:380px;margin:0 auto;}
+@media(max-width:600px){
+  .s-cover,.s-score,.s-done{padding:30px 18px;}
+  .s-cover h1{font-size:26px;}
+  .sec-hero{padding:20px 20px 0;}
+  .panels,.s-quiz,.s-ack{padding:18px;}
+  .g2{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+<div id="topbar">
+  <div class="wordmark">SOZO &#x1F9E0;<small>Brain Center</small></div>
+  <div class="toptag">Mandatory Training &middot; 2026</div>
+</div>
+<div id="prog"><div id="prog-bar"></div></div>
+
+<!-- PAGE 0: COVER -->
+<div class="page show" id="p0">
+  <div class="s-cover">
+    <div class="c-logo">SOZO &#x1F9E0;</div>
+    <div class="c-sub">Brain Center</div>
+    <div class="c-badge">&#x1F4CB; Mandatory &middot; All Staff</div>
+    <h1>Sexual Harassment<br>in the Workplace</h1>
+    <p>Read all 4 sections, complete a short questionnaire, then submit your acknowledgement.</p>
+  </div>
+</div>
+
+<!-- PAGE 1: SECTION 1 -->
+<div class="page" id="p1">
+  <div class="s-sec">
+    <div class="sec-hero">
+      <div class="sec-top"><span class="sec-ic">&#x2696;&#xFE0F;</span><div><h2>Section 1: What is Sexual Harassment?</h2><p>Definition, Cyprus law and types of behaviour</p></div></div>
+      <div class="tbr">
+        <button class="tb on" onclick="tab(this,'t1a')">&#x1F4CB; Overview</button>
+        <button class="tb" onclick="tab(this,'t1b')">&#x1F4D6; Definition &amp; Law</button>
+        <button class="tb" onclick="tab(this,'t1c')">&#x1F5C2;&#xFE0F; Types</button>
+      </div>
+    </div>
+    <div class="panels">
+      <div class="panel on" id="t1a">
+        <div class="grid g2">
+          <div class="card"><div class="ch"><span class="ci">&#x1F4D6;</span><span class="ct">What it is</span></div><p>Any unwanted conduct of a sexual nature that violates dignity or creates a hostile, degrading or offensive environment.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F3AF;</span><span class="ct">Impact not intent</span></div><p>"I was only joking" is not a defence. What matters is the impact on the recipient, not the intention.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F91D;</span><span class="ct">Who is protected</span></div><p>All employees regardless of gender, role or seniority. Both men and women can be victims or perpetrators.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F3E2;</span><span class="ct">Who it covers</span></div><p>Colleagues, managers, patients, visitors and contractors. Harassment does not only come from within the team.</p></div>
+        </div>
+      </div>
+      <div class="panel" id="t1b">
+        <div class="law"><span class="lwi">&#x1F1E8;&#x1F1FE;</span><p><strong>Cyprus Law 205(I)/2002</strong> (aligned with the EU Equal Treatment Directive) defines sexual harassment as any unwanted conduct of a sexual nature that violates dignity or creates an intimidating, hostile, degrading or offensive environment. It is a form of sex discrimination and is <strong>unlawful in the workplace</strong>.</p></div>
+        <div class="grid g1">
+          <div class="card"><div class="ch"><span class="ci">&#x2696;&#xFE0F;</span><span class="ct">Legal test</span></div><p>The law asks whether a <strong style="color:#fff">reasonable person</strong> would find the behaviour offensive or distressing. The perpetrator's intent is irrelevant.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x26A1;</span><span class="ct">Single incident is enough</span></div><p>Harassment does not have to be repeated to be unlawful. A single serious incident can qualify.</p></div>
+        </div>
+      </div>
+      <div class="panel" id="t1c">
+        <div class="grid g2">
+          <div class="card"><div class="ch"><span class="ci">&#x1F5E3;&#xFE0F;</span><span class="ct">Verbal</span></div><p>Sexual comments, jokes, innuendo, intrusive personal questions or derogatory remarks about gender.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x270B;</span><span class="ct">Physical</span></div><p>Unwanted touching, hugging, patting or any physical contact of a sexual nature.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x2709;&#xFE0F;</span><span class="ct">Written</span></div><p>Sexually suggestive notes, letters or printed material left in the workplace.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F4F1;</span><span class="ct">Digital</span></div><p>Explicit messages via email, WhatsApp or social media. Inappropriate content in work group chats.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F441;&#xFE0F;</span><span class="ct">Non-verbal</span></div><p>Staring, leering, displaying explicit material or making sexual gestures.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F504;</span><span class="ct">Persistent contact</span></div><p>Repeated unwanted requests for dates or romantic contact after being told no.</p></div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;padding:10px 0 4px;font-family:'Inter',sans-serif;">Make sure to read all tabs before continuing &rarr;</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: SECTION 2 -->
+<div class="page" id="p2">
+  <div class="s-sec">
+    <div class="sec-hero">
+      <div class="sec-top"><span class="sec-ic">&#x1F50D;</span><div><h2>Section 2: Recognising Harassment</h2><p>Real-world scenarios and how to apply the test</p></div></div>
+      <div class="tbr">
+        <button class="tb on" onclick="tab(this,'t2a')">&#x1F3AD; Scenarios</button>
+        <button class="tb" onclick="tab(this,'t2b')">&#x1F4A1; The Reasonable Person Test</button>
+      </div>
+    </div>
+    <div class="panels">
+      <div class="panel on" id="t2a">
+        <div class="scens">
+          <div class="scen"><div class="sl">Scenario A &middot; Persistent Unwanted Attention</div><p>A colleague repeatedly comments on your appearance and asks you out despite you saying no. You dread coming to work. <strong style="color:#EE7202">This is harassment.</strong></p></div>
+          <div class="scen"><div class="sl">Scenario B &middot; Digital</div><p>A senior staff member sends a junior employee a sexually suggestive meme via the company WhatsApp "meant as a joke." <strong style="color:#EE7202">This is harassment.</strong></p></div>
+          <div class="scen"><div class="sl">Scenario C &middot; Patient or Visitor</div><p>During a clinical session a patient makes a sexually explicit comment to a staff member. SOZO's policy covers patients and visitors too. <strong style="color:#EE7202">SOZO's policy protects staff in this situation.</strong></p></div>
+          <div class="scen"><div class="sl">Scenario D &middot; Post-Relationship Contact</div><p>After a workplace relationship ends, one person continues sending romantic messages despite being asked to stop. <strong style="color:#EE7202">This becomes harassment.</strong></p></div>
+        </div>
+      </div>
+      <div class="panel" id="t2b">
+        <div class="grid g1">
+          <div class="card"><div class="ch"><span class="ci">&#x2696;&#xFE0F;</span><span class="ct">The test</span></div><p>Ask: <strong style="color:#fff">"Would a reasonable person find this behaviour offensive or distressing?"</strong> If yes, it likely qualifies as harassment regardless of whether the target has complained.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F645;</span><span class="ct">Common misconceptions</span></div><p>"They never said they minded": unwanted behaviour does not require a verbal objection.<br><br>"It only happened once": a single serious incident is enough.<br><br>"We are friends": friendly relationships do not make sexual conduct acceptable at work.</p></div>
+        </div>
+        <div class="hl"><span class="hli">&#x1F4A1;</span><p>When in doubt, default to the more respectful option. If you are unsure whether something crosses a line, it probably does.</p></div>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;padding:10px 0 4px;font-family:'Inter',sans-serif;">Make sure to read all tabs before continuing &rarr;</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: SECTION 3 -->
+<div class="page" id="p3">
+  <div class="s-sec">
+    <div class="sec-hero">
+      <div class="sec-top"><span class="sec-ic">&#x1F6E1;&#xFE0F;</span><div><h2>Section 3: Your Rights and Responsibilities</h2><p>What to do and how SOZO will support you</p></div></div>
+      <div class="tbr">
+        <button class="tb on" onclick="tab(this,'t3a')">&#x1F64B; If It Happens To You</button>
+        <button class="tb" onclick="tab(this,'t3b')">&#x1F440; If You Witness It</button>
+        <button class="tb" onclick="tab(this,'t3c')">&#x1F4E3; Reporting Procedure</button>
+      </div>
+    </div>
+    <div class="panels">
+      <div class="panel on" id="t3a">
+        <div class="steps">
+          <div class="step"><div class="sn">1</div><div><div class="st">Speak up if it is safe to do so</div><div class="sd">Tell the person their behaviour is unwanted and must stop. You are not obliged to do this, but it can sometimes resolve the situation quickly.</div></div></div>
+          <div class="step"><div class="sn">2</div><div><div class="st">&#x1F4DD; Keep a record</div><div class="sd">Write down dates, times, location, what was said or done and any witnesses. Keep copies of messages or emails.</div></div></div>
+          <div class="step"><div class="sn">3</div><div><div class="st">&#x1F4E3; Report to HR</div><div class="sd">Contact HR in confidence, verbally or in writing. hr@sozobraincenter.com</div></div></div>
+          <div class="step"><div class="sn">4</div><div><div class="st">&#x1F6E1;&#xFE0F; You are protected</div><div class="sd">You will not be penalised for reporting in good faith. SOZO expressly prohibits retaliation.</div></div></div>
+          <div class="step"><div class="sn">5</div><div><div class="st">&#x1F49B; Support is available</div><div class="sd">If you need time or assistance, speak to HR. You will be treated with dignity throughout the process.</div></div></div>
+        </div>
+      </div>
+      <div class="panel" id="t3b">
+        <div class="grid g2">
+          <div class="card"><div class="ch"><span class="ci">&#x1F6D1;</span><span class="ct">Intervene if safe</span></div><p>A calm statement like "That is not appropriate" can be enough to stop behaviour in the moment.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F4AC;</span><span class="ct">Support the person</span></div><p>Check in privately, let them know what you saw and ask if they need help.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F4E3;</span><span class="ct">Report to HR</span></div><p>You can report directly to HR without the affected person's permission.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F4DD;</span><span class="ct">Document it</span></div><p>Write down what you witnessed with dates and details. Your account may be important in any investigation.</p></div>
+        </div>
+        <div class="hl"><span class="hli">&#x1F6E1;&#xFE0F;</span><p>You will be protected from retaliation if you report in good faith. Silence enables harassment to continue.</p></div>
+      </div>
+      <div class="panel" id="t3c">
+        <div class="steps">
+          <div class="step"><div class="sn">1</div><div><div class="st">&#x1F4E7; Report to HR</div><div class="sd">Contact HR in person, by phone or by email. Confidential. If the complaint involves HR, report directly to the CEO.</div></div></div>
+          <div class="step"><div class="sn">2</div><div><div class="st">&#x23F1;&#xFE0F; Initial assessment within 2 working days</div><div class="sd">HR will acknowledge your complaint and confirm next steps. Full confidentiality maintained.</div></div></div>
+          <div class="step"><div class="sn">3</div><div><div class="st">&#x1F50E; Impartial investigation</div><div class="sd">Both the complainant and respondent present their accounts. Witnesses may be interviewed.</div></div></div>
+          <div class="step"><div class="sn">4</div><div><div class="st">&#x1F4C4; Written outcome</div><div class="sd">Findings communicated in writing. Where harassment is upheld, disciplinary action follows.</div></div></div>
+          <div class="step"><div class="sn">5</div><div><div class="st">&#x1F504; Follow-up</div><div class="sd">HR will check in with the complainant to confirm the situation is resolved and no retaliation has occurred.</div></div></div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;padding:10px 0 4px;font-family:'Inter',sans-serif;">Make sure to read all tabs before continuing &rarr;</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4: SECTION 4 -->
+<div class="page" id="p4">
+  <div class="s-sec">
+    <div class="sec-hero">
+      <div class="sec-top"><span class="sec-ic">&#x1F6A8;</span><div><h2>Section 4: Consequences and Commitments</h2><p>What happens when policy is violated and SOZO's guarantees</p></div></div>
+      <div class="tbr">
+        <button class="tb on" onclick="tab(this,'t4a')">&#x26A0;&#xFE0F; Consequences</button>
+        <button class="tb" onclick="tab(this,'t4b')">&#x1F6E1;&#xFE0F; Non-Retaliation</button>
+      </div>
+    </div>
+    <div class="panels">
+      <div class="panel on" id="t4a">
+        <div class="grid g1">
+          <div class="card"><div class="ch"><span class="ci">&#x26A0;&#xFE0F;</span><span class="ct">For perpetrators</span></div><p>Sexual harassment is a serious disciplinary matter. Consequences may include a formal written warning, demotion, suspension or <strong style="color:#fff">termination of employment</strong>. Serious cases may be referred to Cyprus authorities.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F50D;</span><span class="ct">Malicious complaints</span></div><p>Making a false complaint in bad faith is also a disciplinary offence. An honest complaint that cannot be proved is <strong style="color:#fff">not</strong> treated as malicious and carries no penalty.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x2696;&#xFE0F;</span><span class="ct">Legal exposure</span></div><p>Under Cyprus Law 205(I)/2002, victims may also pursue civil claims. SOZO's policy is designed to address matters internally before they reach that point.</p></div>
+        </div>
+      </div>
+      <div class="panel" id="t4b">
+        <div class="grid g1">
+          <div class="card"><div class="ch"><span class="ci">&#x1F6E1;&#xFE0F;</span><span class="ct">SOZO's commitment</span></div><p>SOZO Brain Center expressly <strong style="color:#fff">prohibits retaliation</strong> against anyone who raises a concern, makes a report or participates in an investigation in good faith. Any act of retaliation is itself a serious disciplinary offence.</p></div>
+          <div class="card"><div class="ch"><span class="ci">&#x1F91D;</span><span class="ct">A shared obligation</span></div><p>Every employee has the right to work in a safe, respectful and dignified environment. This is a <strong style="color:#fff">legal and ethical obligation we all share</strong>, regardless of role or seniority.</p></div>
+        </div>
+        <div class="hl"><span class="hli">&#x1F4E7;</span><p><strong>HR Contact:</strong> hr@sozobraincenter.com &middot; Available confidentially in person, by phone or email.</p></div>
+      </div>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);text-align:center;padding:10px 0 4px;font-family:'Inter',sans-serif;">Make sure to read all tabs before continuing &rarr;</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 5: QUESTIONNAIRE -->
+<div class="page" id="p5">
+  <div class="s-quiz">
+    <div class="qz-hd">
+      <div class="qz-hd-top"><span class="qz-hd-ic">&#x1F9E0;</span><h2>Knowledge Check</h2></div>
+      <p>Answer all 4 questions then submit. You must answer every question before submitting.</p>
+    </div>
+    <div class="qs">
+      <div class="q" id="q1">
+        <div class="qlbl">Question 1 of 4</div>
+        <div class="qtxt"><span class="qe">&#x1F914;</span>A colleague sends a meme with sexual content in the team WhatsApp group "just for a laugh." Is this sexual harassment?</div>
+        <div class="opts">
+          <button class="opt" data-ok="n" onclick="pick(this,'q1')"><span class="ol">A</span>No, it was sent to the whole group, not targeted at one person</button>
+          <button class="opt" data-ok="n" onclick="pick(this,'q1')"><span class="ol">B</span>No, the intent was not malicious, just humour</button>
+          <button class="opt" data-ok="y" onclick="pick(this,'q1')"><span class="ol">C</span>Yes, unwanted sexual content in work channels qualifies regardless of intent</button>
+          <button class="opt" data-ok="n" onclick="pick(this,'q1')"><span class="ol">D</span>Only if someone formally complains about it</button>
+        </div>
+        <div class="fb ok">&#x2705; <strong>Correct!</strong> Intent does not matter. It is the impact on recipients that counts under Cyprus law.</div>
+        <div class="fb no">&#x274C; <strong>Not quite.</strong> This is harassment. Under Cyprus law intent is irrelevant. What matters is whether the conduct was sexual in nature and unwanted.</div>
+      </div>
+      <hr class="qdiv">
+      <div class="q" id="q2">
+        <div class="qlbl">Question 2 of 4</div>
+        <div class="qtxt"><span class="qe">&#x1F914;</span>A patient makes a sexually suggestive comment to a clinical assistant during a session. What applies?</div>
+        <div class="opts">
+          <button class="opt" data-ok="n" onclick="pick(this,'q2')"><span class="ol">A</span>Not covered. The policy only applies to colleagues</button>
+          <button class="opt" data-ok="y" onclick="pick(this,'q2')"><span class="ol">B</span>Covered. SOZO's policy extends to patients, visitors and contractors</button>
+          <button class="opt" data-ok="n" onclick="pick(this,'q2')"><span class="ol">C</span>The staff member should handle it themselves without reporting</button>
+          <button class="opt" data-ok="n" onclick="pick(this,'q2')"><span class="ol">D</span>Only if the patient repeats the behaviour a second time</button>
+        </div>
+        <div class="fb ok">&#x2705; <strong>Correct!</strong> SOZO's policy covers all persons in the workplace including patients, visitors and contractors.</div>
+        <div class="fb no">&#x274C; <strong>Not quite.</strong> SOZO's policy covers everyone in the workplace including patients, visitors and contractors. The staff member should report to HR.</div>
+      </div>
+      <hr class="qdiv">
+      <div class="q" id="q3">
+        <div class="qlbl">Question 3 of 4</div>
+        <div class="qtxt"><span class="qe">&#x1F914;</span>An employee reports a harassment concern in good faith but the investigation finds insufficient evidence. What happens to the person who reported?</div>
+        <div class="opts">
+          <button class="opt" data-ok="n" onclick="pick(this,'q3')"><span class="ol">A</span>They face disciplinary action for making a false complaint</button>
+          <button class="opt" data-ok="y" onclick="pick(this,'q3')"><span class="ol">B</span>Nothing. Reporting in good faith is fully protected even if the complaint cannot be proved</button>
+          <button class="opt" data-ok="n" onclick="pick(this,'q3')"><span class="ol">C</span>They receive a formal warning on their HR record</button>
+          <button class="opt" data-ok="n" onclick="pick(this,'q3')"><span class="ol">D</span>They may face consequences if the respondent complains about them</button>
+        </div>
+        <div class="fb ok">&#x2705; <strong>Correct!</strong> An honest complaint that cannot be proved is not the same as a malicious complaint. SOZO's policy fully protects anyone who reports in good faith.</div>
+        <div class="fb no">&#x274C; <strong>Not quite.</strong> Reporting in good faith is fully protected. Only deliberate false complaints made in bad faith are a disciplinary offence.</div>
+      </div>
+      <hr class="qdiv">
+      <div class="q" id="q4">
+        <div class="qlbl">Question 4 of 4</div>
+        <div class="qtxt"><span class="qe">&#x1F914;</span>You witness a colleague receiving sexually inappropriate comments. The colleague has not reported it. What should you do?</div>
+        <div class="opts">
+          <button class="opt" data-ok="n" onclick="pick(this,'q4')"><span class="ol">A</span>Do nothing. It is not your business if they have not reported it themselves</button>
+          <button class="opt" data-ok="n" onclick="pick(this,'q4')"><span class="ol">B</span>Wait to see if it happens again before acting</button>
+          <button class="opt" data-ok="y" onclick="pick(this,'q4')"><span class="ol">C</span>Check in with the colleague privately and consider reporting to HR. You do not need their permission</button>
+          <button class="opt" data-ok="n" onclick="pick(this,'q4')"><span class="ol">D</span>Confront the harasser publicly in front of the team</button>
+        </div>
+        <div class="fb ok">&#x2705; <strong>Correct!</strong> As a bystander you can support the person and report to HR without their permission.</div>
+        <div class="fb no">&#x274C; <strong>Not quite.</strong> All SOZO employees share responsibility. You can report to HR without permission. Public confrontation can escalate situations.</div>
+      </div>
+    </div>
+    <div class="sub-row">
+      <button class="sub-btn" id="sub-btn" disabled onclick="submitQuiz()">Submit Answers &#x2192;</button>
+      <p class="sub-note" id="sub-note">Answer all 4 questions to submit</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6: SCORE -->
+<div class="page" id="p6">
+  <div class="s-score">
+    <div class="ring"><div class="rn" id="rn">0/4</div><div class="rl">correct</div></div>
+    <div class="rmsg" id="rmsg"></div>
+    <p class="rsub" id="rsub"></p>
+    <button class="rnxt" onclick="showPage('p7')">Continue to Acknowledgement &#x2192;</button>
+  </div>
+</div>
+
+<!-- PAGE 7: ACKNOWLEDGEMENT -->
+<div class="page" id="p7">
+  <div class="s-ack">
+    <div class="ack-hd"><div class="ack-hd-ic">&#x2705;</div><div><h2>Training Acknowledgement</h2><p>Enter your name, tick all five statements, then submit</p></div></div>
+    <label class="name-lbl" for="staff-name">Your full name</label>
+    <input class="name-inp" id="staff-name" type="text" placeholder="e.g. Maria Georgiou" oninput="checkAck()" autocomplete="name" />
+    <div class="ack-list">
+      <div class="ai" onclick="ackTick(this)"><div class="acb"></div><div class="at">I have read and understood SOZO Brain Center's Sexual Harassment Policy.</div></div>
+      <div class="ai" onclick="ackTick(this)"><div class="acb"></div><div class="at">I understand what constitutes sexual harassment under Cyprus law and SOZO's policy.</div></div>
+      <div class="ai" onclick="ackTick(this)"><div class="acb"></div><div class="at">I know how to report a concern and understand the reporting procedure.</div></div>
+      <div class="ai" onclick="ackTick(this)"><div class="acb"></div><div class="at">I understand that retaliation against anyone who reports harassment is prohibited.</div></div>
+      <div class="ai" onclick="ackTick(this)"><div class="acb"></div><div class="at">I commit to treating all colleagues, patients and visitors with dignity and respect.</div></div>
+    </div>
+    <button class="ack-btn" id="ack-btn" disabled onclick="submitAck()">&#x2705; Submit Acknowledgement and Complete Training</button>
+    <p class="ack-note">Questions? Contact HR: hr@sozobraincenter.com</p>
+  </div>
+</div>
+
+<!-- PAGE 8: COMPLETE -->
+<div class="page" id="p8">
+  <div class="s-done">
+    <div class="done-ic">&#x1F3C6;</div>
+    <h2>Training Complete!</h2>
+    <p>Thank you for completing SOZO's Sexual Harassment in the Workplace training.<br><br>Your acknowledgement has been sent to HR.<br><br><strong style="color:rgba(255,255,255,0.95)">Together We Create a Safe Workplace.</strong></p>
+  </div>
+</div>
+
+<div id="nav">
+  <button class="nbtn" id="btn-back" onclick="goBack()">&#x2190; Back</button>
+  <span class="ctr" id="ctr">Introduction</span>
+  <button class="nbtn" id="btn-fwd" onclick="goFwd()">Next &#x2192;</button>
+</div>
+
+</div>
+<script>
+var PAGES = ['p0','p1','p2','p3','p4'];
+var cur = 'p0';
+var score = 0;
+var answered = {};
+
+function showPage(id) {
+  document.getElementById(cur).classList.remove('show');
+  document.getElementById(id).classList.add('show');
+  cur = id;
+  updateNav();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function goFwd() {
+  var idx = PAGES.indexOf(cur);
+  if (idx < 0) return;
+  if (idx < PAGES.length - 1) {
+    showPage(PAGES[idx + 1]);
+  } else {
+    showPage('p5');
+  }
+}
+
+function goBack() {
+  var idx = PAGES.indexOf(cur);
+  if (idx > 0) showPage(PAGES[idx - 1]);
+}
+
+function updateNav() {
+  var idx = PAGES.indexOf(cur);
+  var inSections = idx >= 0;
+  document.getElementById('nav').style.display = inSections ? 'flex' : 'none';
+  if (!inSections) return;
+  document.getElementById('btn-back').style.visibility = idx === 0 ? 'hidden' : 'visible';
+  var fwdBtn = document.getElementById('btn-fwd');
+  fwdBtn.textContent = idx === PAGES.length - 1 ? 'Go to Questionnaire \u2192' : 'Next \u2192';
+  var labels = ['Introduction','Section 1 of 4','Section 2 of 4','Section 3 of 4','Section 4 of 4'];
+  document.getElementById('ctr').textContent = labels[idx];
+  var allPages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8'];
+  var pIdx = allPages.indexOf(cur);
+  document.getElementById('prog-bar').style.width = ((pIdx + 1) / allPages.length * 100) + '%';
+}
+
+function tab(btn, panelId) {
+  var sec = btn.closest('.s-sec');
+  sec.querySelectorAll('.tb').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  sec.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('on'); });
+  document.getElementById(panelId).classList.add('on');
+}
+
+function pick(btn, qid) {
+  if (answered[qid]) return;
+  answered[qid] = true;
+  var qEl = document.getElementById(qid);
+  qEl.querySelectorAll('.opt').forEach(function(o){ o.classList.add('off'); o.onclick = null; });
+  var correct = btn.dataset.ok === 'y';
+  if (correct) {
+    btn.classList.add('ok');
+    score++;
+    qEl.querySelector('.fb.ok').classList.add('show');
+  } else {
+    btn.classList.add('no');
+    qEl.querySelectorAll('.opt').forEach(function(o){ if (o.dataset.ok === 'y') o.classList.add('ok'); });
+    qEl.querySelector('.fb.no').classList.add('show');
+  }
+  var done = Object.keys(answered).length;
+  var note = document.getElementById('sub-note');
+  if (done === 4) {
+    document.getElementById('sub-btn').disabled = false;
+    note.textContent = 'All answered. Ready to submit!';
+    note.style.color = '#86efac';
+  } else {
+    note.textContent = done + ' of 4 answered';
+  }
+}
+
+function submitQuiz() {
+  document.getElementById('rn').textContent = score + '/4';
+  var p = score / 4;
+  var msg, sub;
+  if (p === 1)      { msg = 'Perfect Score! \uD83C\uDF89'; sub = 'Outstanding. You have a thorough understanding of SOZO\'s harassment policy.'; }
+  else if (p >= .75){ msg = 'Great Work! \uD83D\uDC4F'; sub = 'Strong understanding. Review any missed questions before completing your acknowledgement.'; }
+  else if (p >= .5) { msg = 'Good Effort \uD83D\uDC4D'; sub = 'You are on the right track. Please reflect on the training material before submitting.'; }
+  else              { msg = 'Keep Learning \uD83D\uDCDA'; sub = 'Please review the training sections carefully. Your understanding matters.'; }
+  document.getElementById('rmsg').textContent = msg;
+  document.getElementById('rsub').textContent = sub;
+  document.getElementById('prog-bar').style.width = '78%';
+  showPage('p6');
+}
+
+function checkAck() {
+  var name = document.getElementById('staff-name').value.trim();
+  var all = document.querySelectorAll('.ack-list .ai');
+  var allChecked = Array.prototype.every.call(all, function(i){ return i.classList.contains('on'); });
+  document.getElementById('ack-btn').disabled = !(allChecked && name.length > 1);
+}
+
+function ackTick(item) {
+  item.classList.toggle('on');
+  item.querySelector('.acb').textContent = item.classList.contains('on') ? '\u2713' : '';
+  checkAck();
+}
+
+function submitAck() {
+  var name = document.getElementById('staff-name').value.trim();
+  var date = new Date().toLocaleDateString('en-GB', {day:'numeric',month:'long',year:'numeric'});
+  var subj = encodeURIComponent('Sexual Harassment Training Completed: ' + name);
+  var body = encodeURIComponent(
+    'Automated confirmation from SOZO Brain Center Sexual Harassment Training.\n\n' +
+    'Name: ' + name + '\n' +
+    'Date completed: ' + date + '\n' +
+    'Quiz score: ' + score + '/4\n\n' +
+    'The above employee has completed all training sections and confirmed the following acknowledgements:\n\n' +
+    '1. I have read and understood SOZO Brain Center\'s Sexual Harassment Policy.\n' +
+    '2. I understand what constitutes sexual harassment under Cyprus law and SOZO\'s policy.\n' +
+    '3. I know how to report a concern and understand the reporting procedure.\n' +
+    '4. I understand that retaliation against anyone who reports harassment is prohibited.\n' +
+    '5. I commit to treating all colleagues, patients and visitors with dignity and respect.\n\n' +
+    'Please log this completion in your HR records.'
+  );
+  window.location.href = 'mailto:SOZO HR <hr@sozobraincenter.com>?subject=' + subj + '&body=' + body;
+  document.getElementById('prog-bar').style.width = '100%';
+  showPage('p8');
+}
+
+updateNav();
+</script>
+</body>
+</html>
